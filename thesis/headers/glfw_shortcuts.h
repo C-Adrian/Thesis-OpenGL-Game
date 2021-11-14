@@ -1,8 +1,6 @@
 #ifndef GLFW_SHORTCUTS
 #define GLFW_SHORTCUTS
 
-#include "useful_headers.h"
-
 void initializeGLFW();
 
 int initializeGlad();

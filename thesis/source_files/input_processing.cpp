@@ -11,4 +11,6 @@ void processInputs() {
 		glfwSetWindowShouldClose(mainWindow, true);
 	}
 
+
+
 }
