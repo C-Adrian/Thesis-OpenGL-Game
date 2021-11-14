@@ -27,6 +27,9 @@
     <ClCompile Include="source_files\glad.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="source_files\main_window.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\glfw_shortcuts.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="headers\useful_headers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\main_window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

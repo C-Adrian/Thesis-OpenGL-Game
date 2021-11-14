@@ -1,8 +1,14 @@
 #include "input_processing.h"
 
-void processInputs(GLFWwindow* window) {
+bool keyPressed(int key) {
 
-	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
-		glfwSetWindowShouldClose(window, true);
+	return (glfwGetKey(mainWindow, key == GLFW_PRESS));
+}
+
+void processInputs() {
+
+	if (keyPressed(GLFW_KEY_ESCAPE)) {
+		glfwSetWindowShouldClose(mainWindow, true);
 	}
+
 }

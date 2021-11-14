@@ -6,19 +6,17 @@ int windowWidth = 800;
 int windowHeight = 600;
 
 // keep rendering
-void keepRendering(GLFWwindow* window) {
+void keepRendering() {
 
 	// keep glfw window open as long as glfw hasn't been instructed to close
-	while (!glfwWindowShouldClose(window)) {
-
-		processInputs(window);
+	while (!glfwWindowShouldClose(mainWindow)) {
 
 		// rendering
 		glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		// check events and swap buffers
-		glfwSwapBuffers(window); // drawing on a single buffer might cause visual artifacts. render on a back buffer and swap to the front buffer to avoid this
+		glfwSwapBuffers(mainWindow); // drawing on a single buffer might cause visual artifacts. render on a back buffer and swap to the front buffer to avoid this
 		glfwPollEvents(); // checks if any events are triggered
 	}
 }
@@ -27,18 +25,17 @@ int main()
 {
 	initializeGLFW();
 
-	// create glfw window
-	GLFWwindow* window = glfwCreateWindow(windowWidth, windowHeight, "Learning OpenGL", NULL, NULL);
+	createMainWindow(windowWidth, windowHeight, "Learning OpenGL");
 
-	checkWindowInitialized(window);
-	glfwMakeContextCurrent(window);
+	checkWindowInitialized();
+	makeContextCurrent();
 
 	initializeGlad();
 	
 	// tell glfw we should use the framebuffer_size_callback function on the window when size callback event is triggered
-	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+	setFramebufferSizeCallback(framebuffer_size_callback);
 
-	keepRendering(window);
+	keepRendering();
 
 	// clean up resources and exit application after we exit the render loop
 	glfwTerminate();

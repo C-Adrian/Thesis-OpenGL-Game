@@ -1,3 +1,4 @@
+#include "useful_headers.h"
 #include "glfw_shortcuts.h"
 
 void initializeGLFW() {
@@ -8,9 +9,15 @@ void initializeGLFW() {
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // set OpelGL profile to core (only uses minimal functionality)
 }
 
-int checkWindowInitialized(GLFWwindow* window) {
+void createMainWindow(int width, int height, const char* name) {
 
-	if (window == NULL) {
+	mainWindow = glfwCreateWindow(width, height, name, NULL, NULL);
+}
+
+
+int checkWindowInitialized() {
+
+	if (mainWindow == NULL) {
 
 		printf("GLFW window creation failed\n");
 		glfwTerminate();
@@ -18,6 +25,11 @@ int checkWindowInitialized(GLFWwindow* window) {
 	}
 
 	return 1;
+}
+
+void makeContextCurrent() {
+
+	glfwMakeContextCurrent(mainWindow);
 }
 
 int initializeGlad() {
@@ -31,12 +43,19 @@ int initializeGlad() {
 	return 1;
 }
 
+void setFramebufferSizeCallback(void *callback) {
+
+	glfwSetFramebufferSizeCallback(mainWindow, framebuffer_size_callback);
+}
+
 // set the rendering zone for the window
 void setWindowSize(int width, int height) {
+
 	glViewport(0, 0, width, height);
 }
 
 // callback function for window resize event
 void framebuffer_size_callback(GLFWwindow* window, int newWidth, int newHeight) {
+
 	setWindowSize(newWidth, newHeight);
 }
