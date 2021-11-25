@@ -144,16 +144,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="glwf_shortcuts.cpp" />
     <ClCompile Include="learning.cpp" />
     <ClCompile Include="source_files\glad.c" />
-    <ClCompile Include="source_files\glfw_shortucts.cpp" />
     <ClCompile Include="source_files\input_processing.cpp" />
-    <ClCompile Include="source_files\main_window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="headers\glfw_shortcuts.h" />
+    <ClInclude Include="glfw_shortcuts.h" />
     <ClInclude Include="headers\input_processing.h" />
-    <ClInclude Include="headers\main_window.h" />
     <ClInclude Include="headers\useful_headers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

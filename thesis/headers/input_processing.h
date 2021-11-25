@@ -3,8 +3,8 @@
 
 #include "useful_headers.h"
 
-bool keyPressed(int key);
+bool keyPressed(GLFWwindow* window, int key);
 
-void processInputs();
+void processInputs(GLFWwindow * window);
 
 #endif

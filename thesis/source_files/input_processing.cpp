@@ -1,16 +1,15 @@
+#include "useful_headers.h"
 #include "input_processing.h"
 
-bool keyPressed(int key) {
+bool keyPressed(GLFWwindow* window, int key) {
 
-	return (glfwGetKey(mainWindow, key == GLFW_PRESS));
+	return (glfwGetKey(window, key) == GLFW_PRESS);
 }
 
-void processInputs() {
+void processInputs(GLFWwindow* window) {
 
-	if (keyPressed(GLFW_KEY_ESCAPE)) {
-		glfwSetWindowShouldClose(mainWindow, true);
-	}
-
-
-
+    if (keyPressed(window, GLFW_KEY_ESCAPE)) {
+        glfwSetWindowShouldClose(window, true);
+    }
+        
 }

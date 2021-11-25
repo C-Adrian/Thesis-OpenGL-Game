@@ -18,30 +18,24 @@
     <ClCompile Include="learning.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source_files\glfw_shortucts.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
     <ClCompile Include="source_files\input_processing.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="source_files\glad.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="source_files\main_window.cpp">
+    <ClCompile Include="glwf_shortcuts.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="headers\glfw_shortcuts.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="headers\input_processing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="headers\useful_headers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\main_window.h">
+    <ClInclude Include="glfw_shortcuts.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
