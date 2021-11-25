@@ -79,8 +79,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\Work\Projects\thesis\thesis\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Work\Projects\thesis\thesis\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
