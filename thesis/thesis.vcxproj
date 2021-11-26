@@ -144,13 +144,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="glwf_shortcuts.cpp" />
-    <ClCompile Include="learning.cpp" />
+    <ClCompile Include="gl_shortcuts.cpp" />
+    <ClCompile Include="learning-triangles.cpp" />
     <ClCompile Include="source_files\glad.c" />
     <ClCompile Include="source_files\input_processing.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="glfw_shortcuts.h" />
+    <ClInclude Include="gl_shortcuts.h" />
     <ClInclude Include="headers\input_processing.h" />
     <ClInclude Include="headers\useful_headers.h" />
   </ItemGroup>

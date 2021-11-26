@@ -11,4 +11,8 @@ int initializeGLAD();
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
+void checkShaderCompilation(unsigned int shader);
+
+void checkShaderProgram(unsigned int shaderProgram);
+
 #endif
