@@ -145,7 +145,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="gl_shortcuts.cpp" />
-    <ClCompile Include="learning-square.cpp" />
+    <ClCompile Include="learning-shapes.cpp" />
     <ClCompile Include="source_files\glad.c" />
     <ClCompile Include="source_files\input_processing.cpp" />
   </ItemGroup>

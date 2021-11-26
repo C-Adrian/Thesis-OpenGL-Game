@@ -24,7 +24,7 @@
     <ClCompile Include="gl_shortcuts.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="learning-square.cpp">
+    <ClCompile Include="learning-shapes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
