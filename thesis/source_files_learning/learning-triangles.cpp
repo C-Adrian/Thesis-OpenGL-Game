@@ -121,7 +121,7 @@ int main()
 	* screen-space-coordinates - transform to fragments -> fragment shader
 	*/
 
-	unsigned int VBO; // Vertex Buffer Objects (VBO) - store many vertices in GPU's memory (fast)
+	unsigned int VBO; // Vertex Buffer Objects (VBO) - store many vertices in GPU's memory (fast).
 	unsigned int VAO; // OpenGL require we use a Vertex Attribute Object (VAO) which we have to bind.
 
 	glGenVertexArrays(1, &VAO);
