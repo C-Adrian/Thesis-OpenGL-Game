@@ -30,6 +30,9 @@
     <ClCompile Include="headers\shader.h">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="source_files\shader.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\input_processing.h">

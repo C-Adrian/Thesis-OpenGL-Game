@@ -149,6 +149,7 @@
     <ClCompile Include="learning-shaders.cpp" />
     <ClCompile Include="source_files\glad.c" />
     <ClCompile Include="source_files\input_processing.cpp" />
+    <ClCompile Include="source_files\shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gl_shortcuts.h" />
