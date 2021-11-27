@@ -1,5 +1,5 @@
-#ifndef INPUT_PROCESSING
-#define INPUT_PROCESSING
+#ifndef INPUT_PROCESSING_H
+#define INPUT_PROCESSING_H
 
 #include "useful_headers.h"
 

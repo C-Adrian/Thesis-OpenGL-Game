@@ -145,7 +145,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="gl_shortcuts.cpp" />
-    <ClCompile Include="learning-shapes.cpp" />
+    <ClCompile Include="headers\shader.h" />
+    <ClCompile Include="learning-shaders.cpp" />
     <ClCompile Include="source_files\glad.c" />
     <ClCompile Include="source_files\input_processing.cpp" />
   </ItemGroup>
@@ -153,6 +154,10 @@
     <ClInclude Include="gl_shortcuts.h" />
     <ClInclude Include="headers\input_processing.h" />
     <ClInclude Include="headers\useful_headers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\test_shader.fs" />
+    <None Include="shaders\test_shader.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

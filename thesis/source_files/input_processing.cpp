@@ -1,4 +1,3 @@
-#include "useful_headers.h"
 #include "input_processing.h"
 
 bool keyPressed(GLFWwindow* window, int key) {

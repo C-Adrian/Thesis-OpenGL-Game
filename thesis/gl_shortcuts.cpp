@@ -27,34 +27,9 @@ int initializeGLAD() {
     }
 }
 
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
 }
 
-
-void checkShaderCompilation(unsigned int shader) {
-
-    int success;
-    char infoLog[512];
-    glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
-
-    if (!success) {
-        glGetShaderInfoLog(shader, 512, NULL, infoLog);
-        printf("ERROR::SHADER::VERTEX::COMPILATION_FAILED\n");
-        printf(infoLog); printf("\n");
-    }
-}
-
-void checkShaderProgram(unsigned int shaderProgram) {
-
-    int success;
-    char infoLog[512];
-    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-
-    if (!success) {
-        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-        printf("ERROR::SHADER_PROGRAM::LINKING::COMPILATION_FAILED\n");
-        printf(infoLog); printf("\n");
-    }
-}
