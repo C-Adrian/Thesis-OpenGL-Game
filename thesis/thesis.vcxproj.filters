@@ -21,9 +21,6 @@
     <ClCompile Include="source_files\glad.c">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="gl_shortcuts.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
     <ClCompile Include="source_files\shader.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
@@ -31,6 +28,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source_files\stb_image.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source_files\gl_shortcuts.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,10 +41,10 @@
     <ClInclude Include="headers\useful_headers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="gl_shortcuts.h">
+    <ClInclude Include="headers\shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\shader.h">
+    <ClInclude Include="headers\gl_shortcuts.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

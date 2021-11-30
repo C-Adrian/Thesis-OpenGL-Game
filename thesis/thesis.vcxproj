@@ -144,16 +144,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="gl_shortcuts.cpp" />
+    <ClInclude Include="headers\gl_shortcuts.h" />
     <ClInclude Include="headers\shader.h" />
     <ClCompile Include="learning-textures.cpp" />
     <ClCompile Include="source_files\glad.c" />
+    <ClCompile Include="source_files\gl_shortcuts.cpp" />
     <ClCompile Include="source_files\input_processing.cpp" />
     <ClCompile Include="source_files\shader.cpp" />
     <ClCompile Include="source_files\stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="gl_shortcuts.h" />
     <ClInclude Include="headers\input_processing.h" />
     <ClInclude Include="headers\useful_headers.h" />
   </ItemGroup>
