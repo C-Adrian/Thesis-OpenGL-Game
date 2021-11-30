@@ -24,13 +24,13 @@
     <ClCompile Include="gl_shortcuts.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="learning-shaders.cpp">
+    <ClCompile Include="source_files\shader.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="learning-textures.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="headers\shader.h">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source_files\shader.cpp">
+    <ClCompile Include="source_files\stb_image.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,12 +44,21 @@
     <ClInclude Include="gl_shortcuts.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="headers\shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\test_shader.vs">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="shaders\test_shader.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shaders\test_shader_texture.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shaders\test_shader_texture.fs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

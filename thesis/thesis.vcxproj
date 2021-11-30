@@ -79,7 +79,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir)headers;$(ProjectDir)includes;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)headers;$(ProjectDir)textures_learning;$(ProjectDir)includes;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -145,11 +145,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="gl_shortcuts.cpp" />
-    <ClCompile Include="headers\shader.h" />
-    <ClCompile Include="learning-shaders.cpp" />
+    <ClInclude Include="headers\shader.h" />
+    <ClCompile Include="learning-textures.cpp" />
     <ClCompile Include="source_files\glad.c" />
     <ClCompile Include="source_files\input_processing.cpp" />
     <ClCompile Include="source_files\shader.cpp" />
+    <ClCompile Include="source_files\stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gl_shortcuts.h" />
@@ -159,6 +160,8 @@
   <ItemGroup>
     <None Include="shaders\test_shader.fs" />
     <None Include="shaders\test_shader.vs" />
+    <None Include="shaders\test_shader_texture.fs" />
+    <None Include="shaders\test_shader_texture.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
