@@ -27,12 +27,15 @@ int main()
 
 	// Set up vertex data and buffers
 
+	float texCoordmin = 0.0f;
+	float texCoordmax = 1.0f;
+
 	float vertices[] = {
 		// Position           // Color            // Texture coordinates
-		 0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,
-		 0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,
-		-0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,
-		-0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f
+		 0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   texCoordmax, texCoordmax,
+		 0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   texCoordmax, texCoordmin,
+		-0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   texCoordmin, texCoordmin,
+		-0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   texCoordmin, texCoordmax
 	};
 	unsigned int indices[] = {
 		0, 1, 3, // First triangle
@@ -63,18 +66,20 @@ int main()
 	glEnableVertexAttribArray(2);
 
 
-	unsigned int texture;
-	glGenTextures(1, &texture);
-	glBindTexture(GL_TEXTURE_2D, texture);
+	int width, height, nrChannels;
+
+	// First texture
+	unsigned int texture1;
+	glGenTextures(1, &texture1);
+	glBindTexture(GL_TEXTURE_2D, texture1);
 
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
 
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	// Never use mipmap as last parameter for magnifying, because mipmaps are only useful for downscaling
 
-	int width, height, nrChannels;
 	unsigned char* data = stbi_load("textures_learning/container.jpg", &width, &height, &nrChannels, 0);
 
 	if (data) {
@@ -87,11 +92,43 @@ int main()
 
 	stbi_image_free(data);
 
+	// Second texture
+
+	unsigned int texture2;
+	glGenTextures(1, &texture2);
+	glBindTexture(GL_TEXTURE_2D, texture2);
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+
+	stbi_set_flip_vertically_on_load(true);
+	data = stbi_load("textures_learning/face.png", &width, &height, &nrChannels, 0);
+	if (data) {
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+		glGenerateMipmap(GL_TEXTURE_2D);
+	}
+	else {
+		std::cout << "Texture loading failed\n";
+	}
+
+	float opacity = 0.2f;
 
 	while (!glfwWindowShouldClose(mainWindow)) {
 
 		// Input processing
 		processInputs(mainWindow);
+
+		if (keyPressed(mainWindow, GLFW_KEY_MINUS)) {
+			opacity = opacity > 0 ? opacity - 0.001f : opacity;
+		}
+
+		if (keyPressed(mainWindow, GLFW_KEY_EQUAL)) {
+			opacity = opacity <= 1 ? opacity + 0.001f : opacity;
+		}
 
 
 		// Rendering
@@ -101,13 +138,18 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		// Bind texture
-		glBindTexture(GL_TEXTURE_2D, texture);
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, texture1);
+		glActiveTexture(GL_TEXTURE1);
+		glBindTexture(GL_TEXTURE_2D, texture2);
 
 		// Initialize shader
 		shader.use();
+		shader.setInt("texture1", 0);
+		shader.setInt("texture2", 1);
+		shader.setFloat("opacity", opacity);
 
 		// Draw
-
 		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 

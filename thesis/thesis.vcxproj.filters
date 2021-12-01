@@ -49,16 +49,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\test_shader.vs">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="shaders\test_shader.fs">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="shaders\test_shader_texture.vs">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="shaders\test_shader_texture.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shaders\test_shader.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shaders\test_shader.fs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

@@ -158,10 +158,18 @@
     <ClInclude Include="headers\useful_headers.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\test_shader.fs" />
-    <None Include="shaders\test_shader.vs" />
-    <None Include="shaders\test_shader_texture.fs" />
-    <None Include="shaders\test_shader_texture.vs" />
+    <None Include="shaders\test_shader.fs">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="shaders\test_shader.vs">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="shaders\test_shader_texture.fs">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="shaders\test_shader_texture.vs">
+      <FileType>Document</FileType>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
