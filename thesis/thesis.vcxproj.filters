@@ -24,14 +24,14 @@
     <ClCompile Include="source_files\shader.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="learning-textures.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="source_files\stb_image.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="source_files\gl_shortcuts.cpp">
       <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="learning-transformations.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
