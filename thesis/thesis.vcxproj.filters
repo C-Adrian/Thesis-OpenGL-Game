@@ -30,7 +30,7 @@
     <ClCompile Include="source_files\gl_shortcuts.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="learning-transformations.cpp">
+    <ClCompile Include="learning-coordinate-systems.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,6 +59,12 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="shaders\test_shader.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shaders\test_shader_cube.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shaders\test_shader_cube.fs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

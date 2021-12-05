@@ -146,7 +146,7 @@
   <ItemGroup>
     <ClInclude Include="headers\gl_shortcuts.h" />
     <ClInclude Include="headers\shader.h" />
-    <ClCompile Include="learning-transformations.cpp" />
+    <ClCompile Include="learning-coordinate-systems.cpp" />
     <ClCompile Include="source_files\glad.c" />
     <ClCompile Include="source_files\gl_shortcuts.cpp" />
     <ClCompile Include="source_files\input_processing.cpp" />
@@ -164,6 +164,8 @@
     <None Include="shaders\test_shader.vs">
       <FileType>Document</FileType>
     </None>
+    <None Include="shaders\test_shader_cube.fs" />
+    <None Include="shaders\test_shader_cube.vs" />
     <None Include="shaders\test_shader_texture.fs">
       <FileType>Document</FileType>
     </None>
