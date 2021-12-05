@@ -30,7 +30,7 @@
     <ClCompile Include="source_files\gl_shortcuts.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="learning-coordinate-systems.cpp">
+    <ClCompile Include="learning-camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

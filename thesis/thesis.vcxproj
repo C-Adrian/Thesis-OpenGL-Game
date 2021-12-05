@@ -146,7 +146,7 @@
   <ItemGroup>
     <ClInclude Include="headers\gl_shortcuts.h" />
     <ClInclude Include="headers\shader.h" />
-    <ClCompile Include="learning-coordinate-systems.cpp" />
+    <ClCompile Include="learning-camera.cpp" />
     <ClCompile Include="source_files\glad.c" />
     <ClCompile Include="source_files\gl_shortcuts.cpp" />
     <ClCompile Include="source_files\input_processing.cpp" />
